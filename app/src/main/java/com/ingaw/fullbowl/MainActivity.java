@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
                 .get(FoodViewModel.class);
 
         //add new food for testing
-        PetFood food1 = new PetFood("", "brand", 200, "banana", "Melcia");
-        viewModel.addNewPetFood(food1);
+//        PetFood food1 = new PetFood("", "brand", 200, "banana", "Melcia");
+//        viewModel.addNewPetFood(food1);
 
         //loading data
         viewModel.getAllPetFoods().observe(this,
