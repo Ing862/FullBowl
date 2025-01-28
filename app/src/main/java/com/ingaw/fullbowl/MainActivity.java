@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 .get(FoodViewModel.class);
 
         //add new food for testing
-//        PetFood food1 = new PetFood("", "brand", 200, "banana", "Melcia");
+//        PetFood food1 = new PetFood();
 //        viewModel.addNewPetFood(food1);
 
         //loading data
@@ -73,6 +73,8 @@ public class MainActivity extends AppCompatActivity {
                     public void onChanged(List<PetFood> petFoods) {
 
                         foods.clear();
+                        foods.addAll(petFoods);
+                        foodAdapter.setPetFoods(foods);
 
                         for (PetFood c: petFoods){
                             Log.v("TAGY", c.getName());
