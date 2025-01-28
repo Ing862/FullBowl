@@ -1,33 +1,76 @@
-# Gradle files
-.gradle/
-build/
-
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
-*.iml
+# Systemowe pliki i katalogi
+.DS_Store
+Thumbs.db
 .idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
 
-# Keystore files
-*.jks
-*.keystore
+# Katalogi kompilacji
+/build/
+/app/build/
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# Dane lokalne Android Studio
+/local.properties
+/.gradle/
+/*.iml
 
-# Android Profiling
+# Gradle cache i pliki tymczasowe
+.gradle/
+**/build/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle/
+/out/
+
+# Pliki generowane przez IntelliJ IDEA / Android Studio
+*.iml
 *.hprof
+*.log
+*.lock
+*.log.*
+*.idx
+*.orig
+*.rej
+*.diff
+*.patch
+*.class
+*.swp
+*.swo
+*.zip
+*.jar
+
+# Pliki cache
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/codeStyles/
+
+# Konfiguracje lokalne
+.idea/httpRequests
+.idea/misc.xml
+.idea/gradle.xml
+
+# Pliki systemowe OS
+/.DS_Store
+/thumbs.db
+*.stacktrace
+*.orig
+*.rej
+*.diff
+*.patch
+
+# Katalogi lokalnych danych
+*.local-properties/
+
+# Ignorowanie wrażliwych API KEY.
+
+.CONFIG_ENV_JSON
+
+# Ignorowanie deploymentTargetSelector
+.idea/deploymentTargetSelector
+
+# Ignorowanie gradle.xml
+.idea/gradle.xml
+
+# Ignorowanie vcs.xml
+.idea/vcs.xml
