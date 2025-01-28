@@ -19,16 +19,9 @@ public class PetFood {
     @ColumnInfo(name = "pet_food_weight")
     private int weight;
 
-    @ColumnInfo(name = "pet_food_brand")
-    private String brand;
 
-    @ColumnInfo(name = "pet_food_photo_path")
-    private String imagePath;
+    public PetFood( int weight, String name, String pet_name) {
 
-    public PetFood(String imagePath, String brand, int weight, String name, String pet_name) {
-
-        this.imagePath = imagePath;
-        this.brand = brand;
         this.weight = weight;
         this.name = name;
         this.pet_name = pet_name;
@@ -45,21 +38,6 @@ public class PetFood {
         this.id = id;
     }
 
-    public String getImagePath() {
-        return imagePath;
-    }
-
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
-    }
-
-    public String getBrand() {
-        return brand;
-    }
-
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 
     public int getWeight() {
         return weight;
