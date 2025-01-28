@@ -44,7 +44,7 @@ public class Repository {
     }
 
 
-    public void deletePet(PetFood pet){
+    public void deletePetFood(PetFood pet){
         // backgroud database operaton
         executor = Executors.newSingleThreadExecutor();
         // updating ui
@@ -58,7 +58,7 @@ public class Repository {
         });
     }
 
-    public LiveData<List<PetFood>> getAllPets(){
-        return petFoodDAO.getAllPetFood();
+    public LiveData<List<PetFood>> getAllPetFoods(){
+        return petFoodDAO.getAllPetFoods();
     }
 }
