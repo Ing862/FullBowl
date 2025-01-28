@@ -18,16 +18,16 @@ public class AddNewFoodClickHandler {
     }
 
     public void onSubmitBtnClicked(View view){
-        if ((petFood.getName() == null) || (petFood.getPet_name() == null)) {
+        if ((petFood.getName() == null) || (petFood.getPet_name() == null) || petFood.getDate_pet() == null) {
             Toast.makeText(context, "Fields Cannot be empty", Toast.LENGTH_SHORT).show();
         }
         else{
             Intent i = new Intent(context,MainActivity.class);
 
             PetFood c = new PetFood(
-                    petFood.getWeight(),
                     petFood.getName(),
-                    petFood.getPet_name()
+                    petFood.getPet_name(),
+                    petFood.getDate_pet()
 
             );
 

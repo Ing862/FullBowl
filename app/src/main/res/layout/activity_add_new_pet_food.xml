@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:text="Dodaj karmę"
+            android:text="Dodaj myśl"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -64,40 +64,39 @@
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <android.widget.EditText
-            android:id="@+id/textInputEditText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginBottom="50dp"
-            android:hint="Waga karmy (g)"
-android:text="@={PetFood.weight}"
-            android:inputType="number"
-            app:layout_constraintBottom_toTopOf="@+id/textInputEditText2"
-            app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
-            app:layout_constraintVertical_bias="0.853"
-            tools:layout_editor_absoluteX="0dp" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="156dp"
-            android:hint="Nazwa karmy"
-android:text="@={PetFood.name}"
+            android:layout_marginTop="32dp"
+            android:hint="Autor"
+            android:text="@={PetFood.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+            app:layout_constraintTop_toBottomOf="@+id/textInputEditTexta" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTexta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="69dp"
+            android:hint="Data"
+
+            android:digits="0123456789."
+            android:text="@={PetFood.date_pet}"
+            app:layout_constraintTop_toBottomOf="@+id/textView9"
+            tools:layout_editor_absoluteX="0dp" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="132dp"
-            android:hint="Nazwa zwierzęcia"
-android:text="@={PetFood.pet_name}"
-            app:layout_constraintBottom_toTopOf="@+id/submit"
+            android:layout_marginTop="32dp"
+            android:hint="Genialna myśl której później nie można zedytować, cieszmy się chwilą..."
+            android:text="@={PetFood.pet_name}"
+            app:layout_constraintTop_toBottomOf="@+id/textInputEditText"
             tools:layout_editor_absoluteX="0dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

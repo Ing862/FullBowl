@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "53877605228",
+    "project_id": "golden-cf0a3",
+    "storage_bucket": "golden-cf0a3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53877605228:android:77a2010c33222817482949",
+        "android_client_info": {
+          "package_name": "com.ingaw.fullbowl"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVWOBjGvOU9o0U1PokYVfDB26BWFhF2PI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

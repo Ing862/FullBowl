@@ -16,4 +16,6 @@ public class MainActivityClickHandlers {
         Intent i = new Intent(view.getContext(), AddNewPetFoodActivity.class);
         context.startActivity(i);
     }
+
+
 }

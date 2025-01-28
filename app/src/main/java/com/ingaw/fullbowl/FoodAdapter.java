@@ -15,8 +15,10 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     private ArrayList<PetFood> petFoods;
 
+
     public FoodAdapter(ArrayList<PetFood> petFoods) {
         this.petFoods = petFoods;
+
     }
 
     @NonNull
@@ -41,24 +43,27 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     @Override
     public int getItemCount() {
-        if(petFoods != null){
+        if (petFoods != null) {
             return petFoods.size();
-        }else {
+        } else {
             return 0;
         }
     }
+
 
     public void setPetFoods(ArrayList<PetFood> petFoods) {
         this.petFoods = petFoods;
         notifyDataSetChanged();
     }
 
-    class FoodViewHolder extends RecyclerView.ViewHolder{
+
+    class FoodViewHolder extends RecyclerView.ViewHolder {
         private FoodListItemBinding foodListItemBinding;
 
-        public FoodViewHolder(@NonNull FoodListItemBinding foodListItemBinding){
+        public FoodViewHolder(@NonNull FoodListItemBinding foodListItemBinding) {
             super(foodListItemBinding.getRoot());
             this.foodListItemBinding = foodListItemBinding;
+
         }
     }
 }

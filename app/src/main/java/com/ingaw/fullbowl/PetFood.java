@@ -16,15 +16,23 @@ public class PetFood {
     @ColumnInfo(name = "pet_name")
     private String pet_name;
 
-    @ColumnInfo(name = "pet_food_weight")
-    private String weight;
+    @ColumnInfo(name = "date")
+    private String date_pet;
 
 
-    public PetFood( String weight, String name, String pet_name) {
+    public PetFood( String name, String pet_name, String date) {
 
-        this.weight = weight;
         this.name = name;
         this.pet_name = pet_name;
+        this.date_pet = date;
+    }
+
+    public String getDate_pet() {
+        return date_pet;
+    }
+
+    public void setDate_pet(String date_pet) {
+        this.date_pet = date_pet;
     }
 
     public PetFood() {
@@ -38,13 +46,7 @@ public class PetFood {
         this.id = id;
     }
 
-    public String getWeight() {
-        return weight;
-    }
 
-    public void setWeight(String weight) {
-        this.weight = weight;
-    }
 
     public String getName() {
         return name;
