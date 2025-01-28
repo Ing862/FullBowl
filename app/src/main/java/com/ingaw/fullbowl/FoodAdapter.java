@@ -50,7 +50,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
 
     public void setPetFoods(ArrayList<PetFood> petFoods) {
         this.petFoods = petFoods;
-
         notifyDataSetChanged();
     }
 

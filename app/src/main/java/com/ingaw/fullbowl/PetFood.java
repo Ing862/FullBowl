@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "pet_food_table")
 public class PetFood {
     @ColumnInfo(name = "pet_food_id")
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo(name = "pet_food_name")
@@ -17,10 +17,10 @@ public class PetFood {
     private String pet_name;
 
     @ColumnInfo(name = "pet_food_weight")
-    private int weight;
+    private String weight;
 
 
-    public PetFood( int weight, String name, String pet_name) {
+    public PetFood( String weight, String name, String pet_name) {
 
         this.weight = weight;
         this.name = name;
@@ -38,12 +38,11 @@ public class PetFood {
         this.id = id;
     }
 
-
-    public int getWeight() {
+    public String getWeight() {
         return weight;
     }
 
-    public void setWeight(int weight) {
+    public void setWeight(String weight) {
         this.weight = weight;
     }
 
