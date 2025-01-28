@@ -25,8 +25,8 @@ public class PetFood {
     @ColumnInfo(name = "pet_food_photo_path")
     private String imagePath;
 
-    public PetFood(int id, String imagePath, String brand, int weight, String name, String pet_name) {
-        this.id = id;
+    public PetFood(String imagePath, String brand, int weight, String name, String pet_name) {
+
         this.imagePath = imagePath;
         this.brand = brand;
         this.weight = weight;
@@ -84,4 +84,6 @@ public class PetFood {
     public void setPet_name(String pet_name) {
         this.pet_name = pet_name;
     }
+
+
 }

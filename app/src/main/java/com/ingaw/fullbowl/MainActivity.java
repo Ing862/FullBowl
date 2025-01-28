@@ -53,8 +53,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setHasFixedSize(true);
 
-        //adapter
-        foodAdapter = new FoodAdapter(foods);
+
 
         //database
         petFoodDatabase = PetFoodDatabase.getInstance(this);
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
                 .get(FoodViewModel.class);
 
         //add new food for testing
-        PetFood food1 = new PetFood(1, "", "brand", 200, "banana", "Melcia");
+        PetFood food1 = new PetFood("", "brand", 200, "banana", "Melcia");
         viewModel.addNewPetFood(food1);
 
         //loading data
@@ -72,11 +71,16 @@ public class MainActivity extends AppCompatActivity {
                 new Observer<List<PetFood>>() {
                     @Override
                     public void onChanged(List<PetFood> petFoods) {
+
+                        foods.clear();
+
                         for (PetFood c: petFoods){
                             Log.v("TAGY", c.getName());
                         }
                     }
                 });
+
+        foodAdapter = new FoodAdapter(foods);
 
         //linking recycler view
         recyclerView.setAdapter(foodAdapter);
