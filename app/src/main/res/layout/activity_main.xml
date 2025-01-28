@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
+    android:fitsSystemWindows="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    
+    <data>
+        <variable
+            name="clickHandler"
+            type="com.ingaw.fullbowl.MainActivityClickHandlers" />
+    </data>
+    
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
@@ -13,9 +21,11 @@
             android:id="@+id/my_pets_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/backgroud_logo"
             android:padding="20dp"
             android:text="Karma"
             android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -30,6 +40,7 @@
             app:layout_constraintTop_toBottomOf="@+id/my_pets_header">
 
         </androidx.recyclerview.widget.RecyclerView>
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/floatingActionButton"
