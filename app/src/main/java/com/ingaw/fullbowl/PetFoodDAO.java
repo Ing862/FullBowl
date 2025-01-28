@@ -16,6 +16,7 @@ public interface PetFoodDAO {
     @Delete
     void delete(PetFood petFood);
 
-    @Query("SELECT * FROM pet_food")
-    LiveData<List<PetFood>> getAllFood();
+    @Query("SELECT * FROM pet_food_table")
+    LiveData<List<PetFood>> getAllPetFood();
+
 }

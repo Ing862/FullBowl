@@ -4,7 +4,7 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "pet_food")
+@Entity(tableName = "pet_food_table")
 public class PetFood {
     @ColumnInfo(name = "pet_food_id")
     @PrimaryKey

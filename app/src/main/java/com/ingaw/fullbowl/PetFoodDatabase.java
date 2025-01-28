@@ -19,8 +19,8 @@ public abstract class PetFoodDatabase extends RoomDatabase {
             dbInstance = Room.databaseBuilder(
                             context.getApplicationContext(),
                             PetFoodDatabase.class,
-                            "pet_food_db").
-                    fallbackToDestructiveMigration()
+                            "pet_food_db"
+                    ).fallbackToDestructiveMigration()
                     .build();
         }
         return dbInstance;
