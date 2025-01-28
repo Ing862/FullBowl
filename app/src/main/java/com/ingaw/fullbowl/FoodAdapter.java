@@ -37,6 +37,8 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         PetFood currentFood = petFoods.get(position);
 
         holder.foodListItemBinding.setPetFood(currentFood);
+        int days_left = currentFood.count_days_left(currentFood.getWeight(), currentFood.getDaily_portion(), currentFood.getStarting_date());
+        holder.foodListItemBinding.daysLeftNumber.setText(String.valueOf(days_left));
     }
 
     @Override

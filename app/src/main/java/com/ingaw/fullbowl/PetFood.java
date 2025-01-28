@@ -4,6 +4,9 @@ import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 @Entity(tableName = "pet_food_table")
 public class PetFood {
     @ColumnInfo(name = "pet_food_id")
@@ -25,13 +28,42 @@ public class PetFood {
     @ColumnInfo(name = "pet_food_photo_path")
     private String imagePath;
 
-    public PetFood(int id, String imagePath, String brand, int weight, String name, String pet_name) {
-        this.id = id;
+    @ColumnInfo(name = "food_daily_portion")
+    private int daily_portion;
+
+    @ColumnInfo(name = "food_starting_date")
+    private String starting_date;
+
+    public PetFood(String imagePath, String brand, int weight, String name, String pet_name, int daily_portion, String starting_date) {
         this.imagePath = imagePath;
         this.brand = brand;
         this.weight = weight;
         this.name = name;
         this.pet_name = pet_name;
+        this.daily_portion = daily_portion;
+        this.starting_date = starting_date;
+
+    }
+
+
+
+    public int count_days_left(int weight, int daily_portion, String starting_date) {
+        // Parse the String to LocalDate using the formatter
+        LocalDate localDate = LocalDate.parse(starting_date);
+
+        if (daily_portion <= 0) {
+            return 0;
+        }
+        if (starting_date == null) {
+            return -1;
+        }
+        LocalDate today = LocalDate.now();
+        long days_passed = ChronoUnit.DAYS.between(localDate, today);
+
+        int eating_days = weight / daily_portion;
+        int days_left = eating_days - (int) days_passed;
+
+        return days_left > 0 ? days_left : 0;
     }
 
     public PetFood() {
@@ -83,5 +115,21 @@ public class PetFood {
 
     public void setPet_name(String pet_name) {
         this.pet_name = pet_name;
+    }
+
+    public int getDaily_portion() {
+        return daily_portion;
+    }
+
+    public void setDaily_portion(int daily_portion) {
+        this.daily_portion = daily_portion;
+    }
+
+    public String getStarting_date() {
+        return starting_date;
+    }
+
+    public void setStarting_date(String starting_date) {
+        this.starting_date = starting_date;
     }
 }
